@@ -47,13 +47,13 @@ class WINDOW {
 }
 
 function createWin(){
-    for(let i = 0;i<20;i++) {
+    for(let i = 0;i<100;i++) {
         aryw[i] = new WINDOW();
     }
 }
 
 function moveWin(){
-    for(let i = 0;i<20;i++) {
+    for(let i = 0;i<100;i++) {
         aryw[i].move();
     }
 }
