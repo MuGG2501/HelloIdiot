@@ -14,9 +14,9 @@ function getRandomOneOrNegativeOne() {
 
 class WINDOW {
     constructor(){
-        this.rx = getRandomInt(100,screen.availWidth);
-        this.ry = getRandomInt(100,screen.availHeight);
-        this.win = window.open("imgwin.html","_blank",`width=220,height=220,top=${this.ry},left=${this.rx}`); 
+        this.rx = getRandomInt(10,screen.availWidth-230);
+        this.ry = getRandomInt(10,screen.availHeight-300);
+        this.win = window.open("imgwin.html","_blank",`width=220,height=220,top=${this.rx},left=${this.ry}`); 
         this.x = 0;
         this.y = 0;
         this.xDirection = getRandomOneOrNegativeOne();
@@ -41,8 +41,8 @@ class WINDOW {
             this.yDirection *= -1;
         }
 
-        this.win.resizeTo(230,300)
         this.win.moveTo(this.x, this.y);
+        this.win.resizeTo(230,300)
     }
 }
 
@@ -58,11 +58,4 @@ function moveWin(){
     }
 }
 
-var laugh = new Audio('warai5.mp3');
-laugh.loop = true;
-
-function play(){
-    laugh.play();
-}
-
-setInterval(moveWin,10)
+setInterval(moveWin,10);
