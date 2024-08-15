@@ -1,0 +1,9 @@
+body{
+ display: flex;
+}
+
+h1{
+    color: #fff;
+    font-size: 7rem;
+    margin-top: 25%;
+}
